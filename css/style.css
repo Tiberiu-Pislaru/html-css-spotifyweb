@@ -14,13 +14,16 @@
 
 .container-top{
     width:100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 80px);
     background-color: aquamarine;
     display: flex;
 }
 
+.h{
+    height: 80px;
+}
+
 .container-bottom{
-    height: 50px;
     width: 100%;
     background-color:#282828;
     /* align-self: flex-end; */
@@ -39,12 +42,30 @@
 }
 
 .main-top{
-    height: 50px;
     width: 100%;
     position: relative;
     background-color: #02020277;
     z-index: 100;
+    vertical-align: middle;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
+
+.col-w{
+    color:#fff
+}
+
+.upgrade{
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    margin:30px 5px;
+    padding:15px;
+}
+
+/* ---------------------------------------------- */
 
 @media screen and (max-width:574px) {
     .sidebar{
