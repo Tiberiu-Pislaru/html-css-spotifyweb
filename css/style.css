@@ -4,19 +4,15 @@
     box-sizing: border-box;
 }
 
-.container-flex{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background-color: #333;
-}
-
 .container-top{
     width:100%;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     background-color: aquamarine;
     display: flex;
+}
+
+img{
+    height: 100%;
 }
 
 .h{
@@ -26,6 +22,8 @@
 .container-bottom{
     width: 100%;
     background-color:#282828;
+    display: flex;
+    padding: 10px;
     /* align-self: flex-end; */
 }
 
@@ -35,18 +33,27 @@
     background-color:#000;
 }
 
+.main-sidebar{
+    height: calc(100% - 100px);
+    background-color:blue;
+}
+
+.download{
+    height:100px;
+    background-color: red;
+}
+
 .main{
-    width: 100%;
+    width: calc(100% - 300px);
     height: 100%;
     background-color: #141922;
 }
 
 .main-top{
-    width: 100%;
-    position: relative;
+    width:calc(100% - 300px);
+    position: fixed;
     background-color: #02020277;
-    z-index: 100;
-    vertical-align: middle;
+    /* z-index: 100; */
     display: flex;
     justify-content: end;
     align-items: center;
@@ -61,15 +68,77 @@
     border-width: 0;
     border: 2px solid #fff;
     border-radius: 25px;
-    margin:30px 5px;
+    /* margin:30px 0; */
+    margin-right: 5px;
     padding:15px;
 }
+
+/* parte del footer */
+
+.footer-left, .footer-right{
+    width: 200px;
+    /* flex-grow: 1; */
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-center{
+    min-width: calc(100% / 3);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.container-footer{
+
+    display: flex;
+    align-items:center;
+}
+.content-img{
+    height: 45px;
+}
+
+.footer-center>.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 115px;
+    font-size: 15px
+}
+
+.durata-canzone{
+    width: 100%;
+    text-align: center;
+}
+
+.durata-canzone input{
+    width:calc(100% - 70px);
+}
+
+.footer-right input{
+    width:100%;
+}
+
+/* input type range */
+
 
 /* ---------------------------------------------- */
 
 @media screen and (max-width:574px) {
     .sidebar{
         width: 50px;
-        overflow: ;
+        /* overflow: ; */
+    }
+
+    .main{
+        width: calc(100% - 50px);
+    }
+
+    .main-top{
+        width: calc(100% - 50px);
     }
 }
