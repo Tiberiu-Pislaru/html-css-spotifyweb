@@ -13,6 +13,7 @@
 
 img{
     height: 100%;
+
 }
 
 .h{
@@ -28,29 +29,75 @@ img{
 }
 
 .sidebar{
-    width: 300px;
+    width: 170px;
     height:100%;
     background-color:#000;
 }
 
 .main-sidebar{
-    height: calc(100% - 100px);
+    height: calc(100% - 55px);
     background-color:blue;
 }
 
+.contenuto-logo{
+    height:45px;
+}
+
+.logo-icon{
+    display: none;
+}
+
+.playlist{
+    height: calc(100% - (45px + 75px));
+    overflow-y: auto;
+
+}
+.add-playlist{
+    display: flex;
+    align-items: center;
+}
+
+.add-playlist i{
+    font-size: 30px;
+}
+
+.funzione div,
+.img-download,
+.img-account{
+    height:20px;
+    display: inline-block;
+}
+
 .download{
-    height:100px;
+    height:55px;
     background-color: red;
 }
 
+.install, 
+.account-name{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.img-account{
+    border: 1px solid;
+    border-radius:50%;
+    padding: 2px;
+    height:30px;
+    background-color: grey;
+    overflow: hidden;
+}
+
 .main{
-    width: calc(100% - 300px);
+    width: calc(100% - 170px);
     height: 100%;
     background-color: #141922;
 }
 
 .main-top{
-    width:calc(100% - 300px);
+    width:calc(100% - 170px);
     position: fixed;
     background-color: #02020277;
     /* z-index: 100; */
