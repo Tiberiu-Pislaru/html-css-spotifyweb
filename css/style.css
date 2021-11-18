@@ -7,7 +7,7 @@
 .container-top{
     width:100%;
     height: calc(100vh - 80px);
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
 }
 
@@ -18,6 +18,7 @@ img{
 
 .h{
     height: 80px;
+    /* modificare anche il calc() della classe .container-top */
 }
 
 .container-bottom{
@@ -25,18 +26,22 @@ img{
     background-color:#282828;
     display: flex;
     padding: 10px;
-    /* align-self: flex-end; */
 }
 
 .sidebar{
+
+    /* modificare anche il calc() delle classi .main e .main-top */
     width: 170px;
     height:100%;
     background-color:#000;
 }
 
 .main-sidebar{
-    height: calc(100% - 55px);
-    background-color:blue;
+    height: calc(100% - 70px);
+}
+
+.logo{
+    margin-bottom: 20px;
 }
 
 .contenuto-logo{
@@ -50,38 +55,57 @@ img{
 .playlist{
     height: calc(100% - (45px + 75px));
     overflow-y: auto;
+    margin-top:20px;
 
+}
+
+.playlist > .my-playlist ul{
+    list-style: none;
 }
 .add-playlist{
     display: flex;
     align-items: center;
 }
 
+
+
 .add-playlist i{
     font-size: 30px;
 }
 
 .funzione div,
-.img-download,
-.img-account{
+.img-download{
     height:20px;
     display: inline-block;
 }
 
 .download{
-    height:55px;
-    background-color: red;
+    height:70px;
+    /* ricordati di modificare anche al calc() della classe .main-sidebar */
+    background-color: #000;
+    position: relative;
+    /* z-index: 10; */
+    /* la posizione della list delle playlist va sono al container che ha all'interno la foto profilo è il link per scaricare l'app solamento inserendo position relative */
+}
+
+/* .download :nth-child(1){
+    border-bottom: 1px solid #5b5b5b;
+} */
+
+.account-name{
+    padding: 5px 0;
+    border-top: 1px solid #5b5b5b;
 }
 
 .install, 
 .account-name{
     display: flex;
     align-items: center;
-
 }
 
 
 .img-account{
+    display: inline-block;
     border: 1px solid;
     border-radius:50%;
     padding: 2px;
@@ -100,14 +124,27 @@ img{
     width:calc(100% - 170px);
     position: fixed;
     background-color: #02020277;
-    /* z-index: 100; */
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
 .col-w{
-    color:#fff
+    color:#fff;
+}
+
+.col-g, ul{
+    color:#5b5b5b;
+}
+
+.pad-left{
+    padding-left:15px;
+}
+
+.margin-bott,
+li,
+.install{
+    margin-bottom: 10px;
 }
 
 .upgrade{
@@ -115,7 +152,6 @@ img{
     border-width: 0;
     border: 2px solid #fff;
     border-radius: 25px;
-    /* margin:30px 0; */
     margin-right: 5px;
     padding:15px;
 }
@@ -125,7 +161,7 @@ img{
 .footer-left, .footer-right{
     width: 200px;
     /* flex-grow: 1; */
-    /* background-color: bisque; */
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,7 +174,8 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* background-color: blue; */
+    padding: 0 15px;
+
 }
 
 .container-footer{
