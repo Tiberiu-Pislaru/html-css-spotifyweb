@@ -34,10 +34,12 @@ img{
     width: 170px;
     height:100%;
     background-color:#000;
+    overflow-y: hidden;
 }
 
 .main-sidebar{
     height: calc(100% - 70px);
+    min-height: 250px;
 }
 
 .logo{
@@ -54,12 +56,14 @@ img{
 
 .playlist{
     height: calc(100% - (45px + 75px));
+    /* min-height: 150px; */
     overflow-y: auto;
     margin-top:20px;
 
 }
 
-.playlist > .my-playlist ul{
+.playlist > .my-playlist ul,
+.navbar ul{
     list-style: none;
 }
 .add-playlist{
@@ -73,7 +77,7 @@ img{
     font-size: 30px;
 }
 
-.funzione div,
+.funzione .img-funzione,
 .img-download{
     height:20px;
     display: inline-block;
@@ -85,7 +89,7 @@ img{
     background-color: #000;
     position: relative;
     /* z-index: 10; */
-    /* la posizione della list delle playlist va sono al container che ha all'interno la foto profilo è il link per scaricare l'app solamento inserendo position relative */
+    /* la posizione della list delle playlist va sotto al container che ha all'interno la foto profilo e il link per scaricare l'app solamento inserendo position relative */
 }
 
 /* .download :nth-child(1){
@@ -118,6 +122,7 @@ img{
     width: calc(100% - 170px);
     height: 100%;
     background-color: #141922;
+    overflow-y: scroll;
 }
 
 .main-top{
@@ -127,6 +132,27 @@ img{
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+.navbar,
+.box{
+    /* width:200px; */
+    height:200px;
+    margin-top: 80px;
+    /* background-color: white; */
+}
+
+.list-navbar{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    width:750px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.list-navbar li{
+    margin:10px;
 }
 
 .col-w{
@@ -142,7 +168,7 @@ img{
 }
 
 .margin-bott,
-li,
+.playlist li,
 .install{
     margin-bottom: 10px;
 }
@@ -158,7 +184,8 @@ li,
 
 /* parte del footer */
 
-.footer-left, .footer-right{
+.footer-left,
+ .footer-right{
     width: 200px;
     /* flex-grow: 1; */
 
@@ -214,15 +241,35 @@ li,
 
 @media screen and (max-width:574px) {
     .sidebar{
-        width: 50px;
+        width: 60px;
+      
         /* overflow: ; */
     }
 
-    .main{
-        width: calc(100% - 50px);
+    .main,
+    .main-top {
+        width: calc(100% - 60px);
     }
 
-    .main-top{
-        width: calc(100% - 50px);
+    .logo-icon{
+        display: block;
     }
+    .funzione span,
+    .logo-intero, 
+    .playlist,
+    .download{
+        display: none;
+    }
+
+    .funzione{
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .funzione .img-funzione{
+        height: 45px;
+    }
+
+    
 }
