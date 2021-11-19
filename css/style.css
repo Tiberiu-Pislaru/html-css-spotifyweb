@@ -13,6 +13,8 @@
 
 img{
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 
 }
 
@@ -47,7 +49,7 @@ img{
 }
 
 .contenuto-logo{
-    height:45px;
+    height:50px;
 }
 
 .logo-icon{
@@ -55,7 +57,7 @@ img{
 }
 
 .playlist{
-    height: calc(100% - (45px + 75px));
+    height: calc(100% - (50px + 95px));
     /* min-height: 150px; */
     overflow-y: auto;
     margin-top:20px;
@@ -134,12 +136,47 @@ img{
     align-items: center;
 }
 
-.navbar,
-.box{
+.navbar{
     /* width:200px; */
-    height:200px;
     margin-top: 80px;
     /* background-color: white; */
+}
+
+.box-1{
+    /* height: 200px; */
+    /* background-color: royalblue; */
+    min-width: 100%;
+    margin-top: 30px;
+    padding-left:10px;
+}
+
+.box-2{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    /* width: 100px; */
+    /* height: 100px; */
+    /* justify-content: space-between; */
+    /* background-color: red; */
+    /* flex-wrap: wrap; */
+}
+.container-box{
+    padding-right:15px;
+    width: calc(100% / 6 );
+    /* max-width: 170px; */
+}
+
+.container-box .name-song,
+.container-box .name-artist{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.img-box{
+    /* height: 50px; */
+    /* width: 120px; */
+    max-width: 100%;
 }
 
 .list-navbar{
@@ -149,6 +186,7 @@ img{
     width:750px;
     max-width: 100%;
     margin: 0 auto;
+    font-size: 13px;
 }
 
 .list-navbar li{
@@ -178,8 +216,8 @@ img{
     border-width: 0;
     border: 2px solid #fff;
     border-radius: 25px;
-    margin-right: 5px;
-    padding:15px;
+    margin-right: 20px;
+    padding:10px;
 }
 
 /* parte del footer */
@@ -240,6 +278,25 @@ img{
 /* ---------------------------------------------- */
 
 @media screen and (max-width:574px) {
+    
+    .box-2{
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        /* width: 100px; */
+        /* height: 100px; */
+        /* justify-content: space-between; */
+        /* background-color: red; */
+        flex-wrap: wrap;
+    }
+
+    .container-box{
+        padding-right:15px;
+        padding-top: 30px;
+        width: calc(100% / 2 );
+        /* max-width: 170px; */
+    }
+    
     .sidebar{
         width: 60px;
       
@@ -272,4 +329,25 @@ img{
     }
 
     
+}
+
+@media screen and (min-width: 575px) and (max-width: 950px) {
+    
+    .box-2{
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        /* width: 100px; */
+        /* height: 100px; */
+        /* justify-content: space-between; */
+        /* background-color: red; */
+        flex-wrap: wrap;
+    }
+
+    .container-box{
+        padding-right:15px;
+        padding-top: 30px;
+        width: calc(100% / 3 );
+        /* max-width: 170px; */
+    }
 }
