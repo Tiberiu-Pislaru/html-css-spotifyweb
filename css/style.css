@@ -222,7 +222,7 @@ li:hover,
     font-size: 40px;
 }
 
-.name-artist:hover{
+.content-testo .name-artist:hover{
     border-bottom: 1px solid #fff;
     color:#fff;
 }
